@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: .
+    container_name: dev-web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./core:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=django-insecure-8fprsx3suozt91)19gn)5ldbl7%628eo12*&70pg+$69rzi13z
+      - DEBUG=True
+      
